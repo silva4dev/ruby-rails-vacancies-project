@@ -27,5 +27,7 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 // Example: Import a stylesheet in app/frontend/index.css
 // import '~/index.css'
 
-import { hello } from "../utils/hello"
+import { hello, sum } from "../utils/hello"
 console.log(hello)
+console.log(sum(5, 5))
+
