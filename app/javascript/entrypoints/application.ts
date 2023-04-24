@@ -29,5 +29,5 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 
 import { hello, sum } from "../utils/hello"
 console.log(hello)
-console.log(sum(5, 10))
+console.log(sum(5, 5))
 
