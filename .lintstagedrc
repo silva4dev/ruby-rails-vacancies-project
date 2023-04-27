@@ -1,0 +1,8 @@
+{
+  "**/**/*.{scss,css}": ["yarn css:fix"],
+  "app/views/**/*.html.erb": ["yarn erb:fix"],
+  "**/**/*.md": ["yarn md:fix"],
+  "**/**/*.json": ["yarn json:fix"],
+  "**/**/*.{js,ts}": ["yarn js:fix"],
+  "**/**/*.rb": ["yarn ruby:fix"]
+}

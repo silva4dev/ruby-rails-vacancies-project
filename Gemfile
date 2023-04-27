@@ -20,12 +20,17 @@ end
 
 group :development do
   gem "web-console"
-  gem "solargraph"
+  gem "rubocop"
   gem "rubocop-rails"
   gem "rubocop-performance"
-  gem "rubocop"
+  gem "rubocop-rake"
+  gem "rubocop-thread_safety"
+  gem "rubocop-minitest"
   gem "rubocop-rspec"
+  gem "solargraph"
   gem "htmlbeautifier"
+  gem "erb_lint"
+  gem "erb-formatter"
   gem "better_errors"
 end
 
@@ -34,5 +39,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
-

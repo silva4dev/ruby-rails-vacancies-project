@@ -8,13 +8,8 @@
     "checkJs": true,
     "isolatedModules": true
   },
-  "include": [
-    "./**/*.d.ts",
-    "./**/*.ts",
-  ],
-  "exclude": [
-    "./public/**/*",
-  ],
+  "include": ["./**/*.d.ts", "./**/*.ts"],
+  "exclude": ["./public/**/*"],
   "references": [
     {
       "path": "./tsconfig.node.json"

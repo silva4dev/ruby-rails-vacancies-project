@@ -1,8 +1,33 @@
 {
+  "name": "sinaxys-challenges",
+  "version": "1.0.0",
+  "private": "true",
   "type": "module",
+  "engines": {
+    "node": "19.x"
+  },
   "scripts": {
     "dev": "./bin/vite dev",
-    "build": "./bin/vite build"
+    "build": "./bin/vite build",
+    "fix": "yarn css:fix; yarn js:fix; yarn md:fix; yarn json:fix; yarn erb:fix; yarn ruby:fix",
+    "lint": "yarn css:lint; yarn js:lint; yarn md:lint; yarn json:lint; yarn erb:lint; yarn ruby:lint",
+    "css:fix": "yarn prettier --write '**/**/*.{scss,css}'; yarn stylelint '**/**/*.{scss,css}' --fix",
+    "css:lint": "stylelint '**/**/*.{scss,css}'",
+    "erb:fix": "bundle exec erblint -a --lint-all; bundle exec erb-format app/views/**/*.html.erb --write",
+    "erb:lint": "bundle exec erblint --lint-all",
+    "md:fix": "yarn prettier --write '**/**/*.md'",
+    "md:lint": "yarn prettier --check '**/**/*.md'",
+    "json:fix": "yarn prettier --write '*.json'; yarn prettier --write '**/**/*.json'",
+    "json:lint": "yarn prettier --check '*.json'; yarn prettier --check '**/**/*.json'",
+    "js:fix": "yarn prettier --write '**/**/*.{js,ts}'; yarn eslint --fix",
+    "js:lint": "yarn prettier --check '**/**/*.{js,ts}'; yarn eslint",
+    "ruby:fix": "bundle exec rubocop -a",
+    "ruby:lint": "bundle exec rubocop",
+    "eslint": "eslint",
+    "prettier": "prettier",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install",
+    "convert-to-lf": "find . -type f ! -path './node_modules/*' -exec dos2unix {} \\;"
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.1",
@@ -16,12 +41,17 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "lodash": "^4.17.21",
     "prettier": "^2.8.8",
+    "stylelint": "^15.6.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-scss": "^4.6.0",
     "tslib": "^2.4.0",
     "typescript": "^4.8.4",
     "vite": "^4.2.0",
     "vite-plugin-full-reload": "^1.0.4",
-    "vite-plugin-ruby": "^3.2.0"
+    "vite-plugin-ruby": "^3.2.1"
   }
 }
