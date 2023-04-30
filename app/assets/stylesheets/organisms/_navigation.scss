@@ -1,0 +1,48 @@
+.navbar-wrapper {
+  display: flex;
+  padding: 20px 30px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-wrapper .navbar-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar-wrapper .navbar-nav {
+  gap: 30px;
+}
+
+.navbar-wrapper .navbar-nav li:last-child {
+  border: 1px solid #fff;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+}
+
+.navbar-wrapper .navbar-nav li:last-child:is(:hover) {
+  background: #fff;
+  border: 1px solid transparent;
+}
+
+.navbar-wrapper .navbar-nav li:last-child:is(:hover) {
+  background: #fff;
+}
+
+.navbar-wrapper .navbar-nav li:last-child a:is(:hover) {
+  color: #20105b;
+}
+
+.navbar-wrapper .navbar-nav a,
+.navbar-wrapper .navbar-brand {
+  color: #fff;
+}
+
+.navbar-wrapper .navbar-brand:is(:hover),
+.navbar-wrapper .navbar-nav li:first-child:is(:hover) {
+  filter: brightness(0.8);
+}
