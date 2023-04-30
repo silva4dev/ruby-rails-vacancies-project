@@ -8,12 +8,17 @@ gem "sqlite3", "~> 1.4"
 gem "puma", "~> 5.0"
 gem "jbuilder"
 gem "bcrypt"
-gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
+gem "sprockets-rails"
 gem "bootsnap", require: false
 gem "sassc-rails"
+gem "font-awesome-sass"
 gem "vite_rails"
-gem "sprockets-rails"
+gem "rest-client"
 gem "simple_form"
+gem "i18n"
+gem "view_component"
+
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]
@@ -40,3 +45,4 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
