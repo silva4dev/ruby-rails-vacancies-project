@@ -1,0 +1,17 @@
+<% if flash[:notice] %>
+  <div class="alert alert-primary mt-3" role="alert">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+<% if flash[:alert] && !flash[:alert].is_a?(Array) %>
+  <div class="alert alert-warning mt-3" role="alert">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+<% if flash[:alert].is_a?(Array) && flash[:alert] %>
+  <div class="alert alert-warning mt-3">
+    <% flash[:alert].each do |error_message| %>
+      <%= error_message %> <br />
+    <% end %>
+  </div>
+<% end %>
