@@ -33,3 +33,6 @@ Style/StringLiterals:
 
 Bundler/OrderedGems:
   Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
