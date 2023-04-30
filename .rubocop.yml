@@ -36,3 +36,12 @@ Bundler/OrderedGems:
 
 Metrics/MethodLength:
   Enabled: false
+
+Rails/I18nLocaleTexts:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Layout/EndOfLine:
+  Enabled: false
