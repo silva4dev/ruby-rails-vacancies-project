@@ -1,0 +1,29 @@
+<h1 class="mb-5">Vagas de emprego</h1>
+<% @jobs.as_json.each do |job| %>
+  <%= link_to jobs_details_path(job['id']), class: "card-wrapper-action" do %>
+    <div class="card mb-3 w-100">
+      <div class="card-body">
+        <div class="card-wrapper">
+          <div class="card-wrapper-image">
+            <%= image_tag job["clinic"]["image"], alt: job["specialty"] %>
+          </div>
+          <div class="card-wrapper-group">
+            <h3 class="card-wrapper-title"><%= job["specialty"] %></h3>
+            <div class="card-wrapper-body">
+              <div class="card-wrapper-info">
+                <p><%= job["value"] %>
+                  / plantão</p>
+                <p><%= job["clinic"]["name"] %></p>
+              </div>
+              <small class="text-muted">
+                <%= job["clinic"]["city"] %>
+                /
+                <%= job["clinic"]["state"] %>
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>

@@ -1,0 +1,69 @@
+<h1 class="mb-5"><%= @job["specialty"] %></h1>
+<div class="details-wrapper">
+  <div class="slider-wrapper">
+    <div class="slider-wrapper-group">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <% @job['images'].each_index do |index| %>
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="<%= index %>"
+              class="<%= index == 0 ? "active" : "" %>"
+            ></li>
+          <% end %>
+        </ol>
+        <div class="carousel-inner">
+          <% @job['images'].each_index do |index| %>
+            <div class="carousel-item <%= index == 0 ? "active" : "" %>">
+              <%= image_tag @job["images"][index], class: "d-block w-100" %>
+            </div>
+          <% end %>
+        </div>
+        <% if @job['images'].count > 1 %>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        <% end %>
+      </div>
+    </div>
+    <div class="slider-wrapper-btn">
+      <button class="btn btn-primary">Me canditar</button>
+    </div>
+  </div>
+  <div class="card w-100">
+    <div class="card-body">
+      <div class="col-12 mb-3">
+        <h5 class="font-weight-bold">Descrição da vaga</h5>
+        <p><%= @job["description"] %></p>
+      </div>
+      <div class="col-12 mb-4">
+        <h5 class="font-weight-bold">Remuneração</h5>
+        <p><%= @job["value"] %>
+          /
+          <%= @job["value_period"] %></p>
+      </div>
+      <div class="col-12">
+        <h5 class="font-weight-bold">Local de trabalho</h5>
+        <p class="mb-1"><%= @job["clinic"]["name"] %></p>
+        <p><%= @job["clinic"]["city"] %>
+          /
+          <%= @job["clinic"]["state"] %></p>
+      </div>
+    </div>
+  </div>
+</div>
