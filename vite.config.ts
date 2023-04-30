@@ -9,6 +9,7 @@ export default defineConfig({
       "config/routes.rb",
       "app/views/**/*",
       "app/assets/stylesheets/**/*",
+      "app/components/**/*",
     ]),
   ],
 });
