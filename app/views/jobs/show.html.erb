@@ -41,9 +41,14 @@
         <% end %>
       </div>
     </div>
-    <div class="slider-wrapper-btn">
-      <button class="btn btn-primary">Me canditar</button>
-    </div>
+    <% if Current.user %>
+      <div class="slider-wrapper-btn">
+        <%= button_to "Me candidatar",
+        job_applications_path(@job["id"]),
+        method: :post,
+        class: "btn btn-primary" %>
+      </div>
+    <% end %>
   </div>
   <div class="card w-100">
     <div class="card-body">

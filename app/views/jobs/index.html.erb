@@ -1,4 +1,4 @@
-<h1 class="mb-5">Vagas de emprego</h1>
+<h1 class="mb-5"><%= t("title") %></h1>
 <% @jobs.as_json.each do |job| %>
   <%= link_to jobs_details_path(job['id']), class: "card-wrapper-action" do %>
     <div class="card mb-3 w-100">

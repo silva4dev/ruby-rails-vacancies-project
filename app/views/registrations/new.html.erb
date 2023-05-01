@@ -1,20 +1,29 @@
-<h1 class="mb-3">Cadastre-se</h1>
-<%= form_with model: @user, local: true, data: { turbo: false }, url: sign_up_path do |form| %>
-  <div class="mb-3">
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "form-control", placeholder: "steve@sinaxys.com" %>
-  </div>
-  <div class="mb-3">
-    <%= form.label :password %>
-    <%= form.password_field :password, class: "form-control", placeholder: "password" %>
-  </div>
-  <div class="mb-3">
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation,
-                        class: "form-control",
-                        placeholder: "password" %>
-  </div>
-  <div class="mb-3">
-    <%= form.submit "Cadastre-se", class: "btn btn-primary mt-3" %>
-  </div>
+<h1 class="mb-3"><%= t("sign_up_title") %></h1>
+<%= simple_form_for @user, url: sign_up_path, html: { autocomplete: "off", data: { turbo: false, local: true } } do |form| %>
+  <%= form.input :email,
+             required: true,
+             input_html: {
+               class: "form-control mb-3",
+               placeholder: t("placeholders.user.email")
+             } %>
+  <%= form.input :password,
+             required: true,
+             input_html: {
+               class: "form-control mb-3",
+               placeholder: t("placeholders.user.password")
+             } %>
+  <%= form.input :password_confirmation,
+             required: true,
+             input_html: {
+               class: "form-control mb-3",
+               placeholder: t("placeholders.user.password_confirmation")
+             } %>
+  <%= form.input :professional_experience,
+             as: :text,
+             input_html: {
+               class: "form-control mb-3",
+               placeholder: t("placeholders.user.professional_experience"),
+               rows: "5"
+             } %>
+  <%= form.button :submit, t("helpers.sign_up"), class: "btn btn-primary mt-3" %>
 <% end %>
