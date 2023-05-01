@@ -1,6 +1,6 @@
-class JobsController < ApplicationController
-  require_relative "../services/api_fetcher"
+require_relative "../services/api_fetcher"
 
+class JobsController < ApplicationController
   def index
     @jobs = Services::ApiFetcher.new.fetch_data(method: :get, path: "/jobs")
   end
