@@ -1,0 +1,10 @@
+pt-BR:
+  sign_up_title: "Cadastre-se"
+  placeholders:
+    user:
+      email: "steve@sinaxys.com"
+      password: "Senha"
+      password_confirmation: "Confirmação da Senha"
+      professional_experience: "Experiência profissional"
+  helpers:
+    sign_up: "Cadastre-se"

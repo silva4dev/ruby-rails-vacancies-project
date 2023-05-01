@@ -1,0 +1,8 @@
+en:
+  sign_in_title: "Access your account"
+  placeholders:
+    user:
+      email: "steve@sinaxys.com"
+      password: "Password"
+  helpers:
+    sign_in: "Sign In"

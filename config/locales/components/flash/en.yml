@@ -1,0 +1,10 @@
+en:
+  flash_registrations_notice: "Successfully created account"
+  flash_sessions_notice: "Logged in successfully"
+  flash_sessions_logout: "Logged out"
+  flash_sessions_invalid: "Invalid email or password"
+  flash_sessions_invalid_signed: "You must be signed in to do that"
+  flash_sessions_invalid_not_logged: "You must be logged out"
+  flash_jobs_applications_invalid: "Unable to submit your application for the job"
+  flash_jobs_applications_notice: "Your application for the vacancy has been sent successfully"
+  flash_jobs_applications_exists: "Your application for this vacancy has already been sent"

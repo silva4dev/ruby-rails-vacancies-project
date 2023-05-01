@@ -1,0 +1,10 @@
+pt-BR:
+  flash_registrations_notice: "Conta criada com sucesso"
+  flash_sessions_notice: "Logado com sucesso"
+  flash_sessions_logout: "Desconectado"
+  flash_sessions_invalid: "E-mail ou senha inválidos"
+  flash_sessions_invalid_signed: "Você deve estar conectado para fazer isso"
+  flash_sessions_invalid_not_logged: "Você deve estar deslogado"
+  flash_jobs_applications_invalid: "Não foi possível enviar sua candidatura para a vaga"
+  flash_jobs_applications_notice: "Sua candidatura para a vaga foi enviada com sucesso"
+  flash_jobs_applications_exists: "Sua candidatura para essa vaga já foi enviada"

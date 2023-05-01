@@ -1,0 +1,5 @@
+en:
+  hello: "Hello"
+  navbar_item_sign_in: "Access your account"
+  navbar_item_sign_up: "Sign Up"
+  navbar_item_logout: "Logout"

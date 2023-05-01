@@ -1,0 +1,15 @@
+pt-BR:
+  activerecord:
+    errors:
+      messages:
+        bad_email: "deve ser um endereço de e-mail válido"
+    models:
+      user:
+        one: Usuario
+        other: Usuarios
+    attributes:
+      user:
+        email: Email
+        password: Senha
+        password_confirmation: Confirmação da senha
+        professional_experience: Experiência profissional
