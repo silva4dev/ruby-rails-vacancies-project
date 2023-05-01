@@ -1,11 +1,20 @@
 <nav class="navbar navbar-expand-lg bg-primary-dark navbar-wrapper">
   <%= link_to "Sinaxys", root_path, class: "navbar-brand" %>
   <ul class="navbar-nav">
-    <li class="nav-item">
-      <%= link_to "Cadastre-se", sign_up_path, class: "nav-link" %>
-    </li>
-    <li class="nav-item">
-      <%= link_to "Acesse sua conta", sign_in_path, class: "nav-link" %>
-    </li>
+    <% if Current.user %>
+      <div class="user-wrapper">
+        <p><%= t("hello") %>, <%= Current.user.email %></p>
+        <li class="nav-item logout">
+          <%= button_to t("navbar_item_logout"), logout_path, method: :delete, class: "nav-link" %>
+        </li>
+      </div>
+    <% else %>
+      <li class="nav-item sign_up">
+        <%= link_to t("navbar_item_sign_up"), sign_up_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item sign_in">
+        <%= link_to t("navbar_item_sign_in"), sign_in_path, class: "nav-link" %>
+      </li>
+    <% end %>
   </ul>
 </nav>
