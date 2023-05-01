@@ -45,3 +45,6 @@ Metrics/AbcSize:
 
 Layout/EndOfLine:
   Enabled: false
+
+Rails/UniqueValidationWithoutIndex:
+  Enabled: false
