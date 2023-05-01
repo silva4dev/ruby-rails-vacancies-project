@@ -48,3 +48,6 @@ Layout/EndOfLine:
 
 Rails/UniqueValidationWithoutIndex:
   Enabled: false
+
+Layout/LineLength:
+  Enabled: false
