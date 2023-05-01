@@ -17,23 +17,20 @@
   gap: 30px;
 }
 
-.navbar-wrapper .navbar-nav li:last-child {
+.navbar-wrapper .navbar-nav .sign_in {
   border: 1px solid #fff;
   border-radius: 8px;
   width: 200px;
   text-align: center;
 }
 
-.navbar-wrapper .navbar-nav li:last-child:is(:hover) {
+.navbar-wrapper .navbar-nav .sign_in:is(:hover) {
   background: #fff;
   border: 1px solid transparent;
+  color: #20105b;
 }
 
-.navbar-wrapper .navbar-nav li:last-child:is(:hover) {
-  background: #fff;
-}
-
-.navbar-wrapper .navbar-nav li:last-child a:is(:hover) {
+.navbar-wrapper .navbar-nav .sign_in a:is(:hover) {
   color: #20105b;
 }
 
@@ -43,6 +40,34 @@
 }
 
 .navbar-wrapper .navbar-brand:is(:hover),
-.navbar-wrapper .navbar-nav li:first-child:is(:hover) {
+.navbar-wrapper .navbar-nav .sign_up:is(:hover) {
   filter: brightness(0.8);
+}
+
+.navbar-wrapper .navbar-nav .logout button {
+  border: 1px solid #fff;
+  border-radius: 8px;
+  width: 180px;
+  text-align: center;
+  background: transparent;
+  color: #fff;
+}
+
+.navbar-wrapper .navbar-nav .logout button:is(:hover) {
+  background: #fff;
+  border: 1px solid transparent;
+  color: #20105b;
+}
+
+.user-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.user-wrapper p {
+  font-size: 16px;
+  color: #fff;
+  margin: 0 auto;
+  font-weight: bold;
 }

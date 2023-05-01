@@ -55,3 +55,14 @@
 .card-wrapper-action:is(:hover) {
   text-decoration: none;
 }
+
+.card-wrapper-action:is(:hover) .card {
+  background-color: #20105b;
+  color: #fff;
+}
+
+.card-wrapper-action:is(:hover) .card-wrapper-title,
+.card-wrapper-action:is(:hover) .card-wrapper-info,
+.card-wrapper-action:is(:hover) small {
+  color: #fff !important;
+}
