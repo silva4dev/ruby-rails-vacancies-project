@@ -9,5 +9,7 @@ Rails.application.routes.draw do
 
   get "jobs/details/:id", to: "jobs#show", as: "jobs_details"
 
+  post "jobs/details/:id/apply", to: "job_applications#create", as: "job_applications"
+
   root "jobs#index"
 end
