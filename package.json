@@ -33,7 +33,7 @@
     "@hotwired/stimulus": "^3.2.1",
     "@hotwired/turbo-rails": "^7.3.0",
     "@rails/activestorage": "^7.0.4-3",
-    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
     "@typescript-eslint/parser": "^5.59.1",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.39.0",
